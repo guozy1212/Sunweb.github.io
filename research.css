@@ -1,0 +1,109 @@
+/* 研究页面样式 */
+.research-direction {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f8ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.research-direction h3 {
+  color: #483d8b;
+  margin-top: 0;
+  border-bottom: 2px solid #6a5acd;
+  padding-bottom: 10px;
+}
+
+.research-direction ul {
+  padding-left: 20px;
+}
+
+.research-direction li {
+  margin-bottom: 10px;
+}
+
+/* 图片和论文样式 */
+.research-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.research-image {
+  flex: 1 1 calc(30% - 5px);
+  max-width: calc(30% - 5px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.research-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 10px 0;
+  max-height: 350px;
+  border: none;
+  box-shadow: none;
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+
+.image-caption1 {
+  width: 100%;
+  text-align: center;
+  margin-top: -30px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.image-caption2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 论文列表样式 */
+.research-publications ol {
+  padding-left: 20px;
+  counter-reset: publication-counter;
+  list-style: none;
+}
+
+.research-publications ol li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.research-publications ol li::before {
+  content: "[" counter(publication-counter) "] ";
+  counter-increment: publication-counter;
+  position: absolute;
+  left: 0;
+  color: #483d8b;
+  font-weight: bold;
+}
+
+/* 正文链接样式 */
+a {
+  color: #9522c2; /* 正文链接的默认颜色 */
+  text-decoration: none;
+}
+
+ol a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #9522c2; /* 确保访问过的正文链接颜色不变 */
+}

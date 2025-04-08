@@ -1,0 +1,97 @@
+/* 新闻页面样式 */
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+.news-item {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #3498db;
+}
+
+.news-item time {
+  font-size: 1.5em;
+  color: #8e44ad;
+  margin-left: 10px;
+}
+
+.news-item p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-left: 10px;
+}
+
+/* 顶部导航链接样式 */
+nav a {
+  color: #3498db; /* 顶部导航链接的颜色 */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:visited {
+  color: #3498db; /* 确保访问过的导航链接颜色不变 */
+}
+
+/* 正文链接样式 */
+a {
+  color: #e74c3c; /* 正文链接的默认颜色 */
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #e74c3c; /* 确保访问过的正文链接颜色不变 */
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.news-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.news-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.news-item h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.i2024-12-13,
+.i2024-09-30,
+.i2024-09-06 {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 间距 */
+  margin-top: 10px;
+}
+
+.i2024-12-13 img,
+.i2024-09-30 img,
+.i2024-09-06 img {
+  width: 48%; /* 每张图片占据容器的48% */
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

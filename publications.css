@@ -1,0 +1,143 @@
+/* 论文页面样式 */
+.publication-item {
+  background-color: #f8f8ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publication-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f8ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publication-section h3 {
+  color: #483d8b;
+  margin-top: 0;
+  border-bottom: 2px solid #6a5acd;
+  padding-bottom: 10px;
+}
+
+.publication-list {
+  padding-left: 20px;
+}
+
+.publication-list li {
+  margin-bottom: 10px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.publication-list li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 4px rgba(72, 61, 139, 0.2);
+}
+
+.publication-list li::before {
+  content: "\f15c"; /* Font Awesome 文件图标 */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #483d8b;
+  margin-right: 10px;
+}
+
+.publication-list a {
+  color: #483d8b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.publication-list a:hover {
+  color: #2f2a5e;
+  text-decoration: underline;
+}
+
+/* 导览栏 */
+/* 导航栏样式 */
+.publication-nav {
+  position: fixed;
+  top: 190px; /* 低于header高度 */
+  right: 20px;
+  width: 150px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  z-index: 1000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.nav-title {
+  font-family: "Roboto Slab", serif;
+  color: #2f2a5e;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e6e6f0;
+}
+
+.publication-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publication-nav li {
+  margin: 8px 0;
+}
+
+.publication-nav a {
+  color: #483d8b;
+  text-decoration: none;
+  font-size: 0.95em;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.2s;
+}
+
+.publication-nav a:hover {
+  background: #f0f0f5;
+  transform: translateX(3px);
+}
+
+.year-nav ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  padding-left: 15px;
+}
+
+.year-nav:hover ul {
+  max-height: 500px; /* 超过实际高度即可 */
+}
+
+.year-nav > span {
+  cursor: pointer;
+  display: block;
+  padding: 6px 12px;
+  color: #6a5acd;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .publication-nav {
+    display: none; /* 移动端隐藏 */
+  }
+}
+
+/* 修正锚点定位 */
+.publication-section h3,
+.publication-section h4 {
+  scroll-margin-top: 100px; /* 根据header高度调整 */
+}
