@@ -20,6 +20,15 @@
   margin-top: 0;
   border-bottom: 2px solid #6a5acd;
   padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.publication-section h4 {
+  color: #483d8b;
+  margin-top: 20px;
+  border-bottom: 2px solid #6a5acd;
+  padding-bottom: 10px;
+  font-size: 1.2em;
 }
 
 .publication-list {
@@ -65,7 +74,7 @@
 /* 导航栏样式 */
 .publication-nav {
   position: fixed;
-  top: 190px; /* 低于header高度 */
+  top: 152px; /* 低于header高度 */
   right: 20px;
   width: 150px;
   background: #ffffff;
