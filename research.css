@@ -23,53 +23,54 @@
 }
 
 /* 图片和论文样式 */
+
 .research-images-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
   margin: 20px 0;
   justify-content: center;
-  align-items: stretch;
+  align-items: stretch; /* 确保所有图片容器等高 */
 }
 
 .research-image {
-  flex: 1 1 calc(30% - 5px);
-  max-width: calc(30% - 5px);
-  text-align: center;
+  flex: 1 1 350px; /* 基础宽度350px，可根据容器伸缩 */
+  max-width: 450px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .research-image img {
   width: 100%;
-  height: auto;
+  height: 250px; /* 固定图片高度 */
   object-fit: contain;
-  border-radius: 8px;
-  margin: 10px 0;
-  max-height: 350px;
-  border: none;
-  box-shadow: none;
-  transform: scale(1.1);
-  transform-origin: center center;
+  border-radius: 6px;
+  margin-bottom: 15px;
 }
 
-.image-caption1 {
-  width: 100%;
-  text-align: center;
-  margin-top: -30px;
-  font-style: italic;
-  color: #666;
-  font-size: 0.9rem;
-}
-
+/* 统一caption样式 */
+.image-caption1,
 .image-caption2 {
   width: 100%;
   text-align: center;
-  margin-top: 10px;
   font-style: italic;
   color: #666;
   font-size: 0.9rem;
+  margin-top: auto; /* 关键属性：将caption推到容器底部 */
+  margin-bottom: 0;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+/* 移除旧的定位方式 */
+.image-caption1 {
+  margin-top: auto !important;
 }
 
 /* 论文列表样式 */
