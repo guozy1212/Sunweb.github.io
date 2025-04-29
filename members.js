@@ -22,6 +22,54 @@ const translations = {
       postdocTitle: "Postdoctoral Fellows",
       phdTitle: "Ph.D Candidates",
       undergradTitle: "Undergraduate Fellows",
+      alumniTitle: "Alumni",
+      name: [
+        "Junjie Wang",
+        "Chi ding",
+        "Yu Han",
+        "Tianheng Huang",
+        "Jiuyang Shi",
+        "Shuning Pan",
+        "Qing Lu",
+        "Yunlong Wang",
+        "Zhixin Liang",
+        "Quihan Jia",
+        "Yijie Zhu",
+        "Zhongwei Zhang",
+        "Shaobo Yu",
+        "Ziyang Yang",
+        "Yujian Pan",
+        "Haoting Zhang",
+        "Zhennan Zhang",
+        "Zhiyue Guo",
+        "Shengzhao Xu",
+        "Xiaomeng Wang",
+        "Zhaopeng Guo",
+        "Juefei Wu",
+      ],
+      institution: [
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Nanjing University",
+        "Hangzhou Normal University",
+        "ShanghaiTech University",
+      ],
     },
   },
   zh: {
@@ -46,6 +94,54 @@ const translations = {
       postdocTitle: "博士后成员",
       phdTitle: "博士研究生成员",
       undergradTitle: "本科生成员",
+      alumniTitle: "毕业生成员",
+      name: [
+        "王俊杰",
+        "丁驰",
+        "韩瑜",
+        "黄天衡",
+        "施九洋",
+        "潘书宁",
+        "鲁清",
+        "王云龙",
+        "梁智新",
+        "贾秋涵",
+        "朱怡杰",
+        "张仲伟",
+        "于少薄",
+        "杨子洋",
+        "潘宇箭",
+        "张皓庭",
+        "张圳南",
+        "郭智岳",
+        "许晟钊",
+        "王晓梦",
+        "郭照芃",
+        "吴珏霏",
+      ],
+      institution: [
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "南京大学",
+        "杭州师范大学",
+        "上海科技大学",
+      ],
     },
   },
 };
@@ -89,9 +185,20 @@ function setLanguage(lang) {
 
   // 各类成员小标题
   const headers = document.querySelectorAll(".fellows h3");
-  if (headers.length >= 3) {
+  if (headers.length >= 4) {
     headers[0].textContent = data.members.postdocTitle;
     headers[1].textContent = data.members.phdTitle;
     headers[2].textContent = data.members.undergradTitle;
+    headers[3].textContent = data.members.alumniTitle;
   }
+
+  // 姓名，所属单位
+  const names = document.querySelectorAll(".fellow .name");
+  names.forEach((name, idx) => {
+    name.innerHTML = "&#x1F464; " + data.members.name[idx];
+  });
+  const institutions = document.querySelectorAll(".affiliation");
+  institutions.forEach((institution, idx) => {
+    institution.innerHTML = "&#x1F30D; " + data.members.institution[idx];
+  });
 }
