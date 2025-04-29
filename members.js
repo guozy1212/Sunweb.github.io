@@ -195,10 +195,10 @@ function setLanguage(lang) {
   // 姓名，所属单位
   const names = document.querySelectorAll(".fellow .name");
   names.forEach((name, idx) => {
-    name.innerHTML = "&#x1F464; " + data.members.name[idx];
+    name.innerHTML = "&#x26B2; " + data.members.name[idx];
   });
   const institutions = document.querySelectorAll(".affiliation");
   institutions.forEach((institution, idx) => {
-    institution.innerHTML = "&#x1F30D; " + data.members.institution[idx];
+    institution.innerHTML = "&#x1F3DB; " + data.members.institution[idx];
   });
 }
