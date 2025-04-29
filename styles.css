@@ -269,11 +269,11 @@ nav a:visited {
   color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .language-switch {
     position: fixed; /* 改为fixed定位使其始终可见 */
-    bottom: 20px; /* 距离底部20px */
-    right: 20px; /* 距离右侧20px */
+    bottom: 2px; /* 距离底部20px */
+    right: 2px; /* 距离右侧20px */
     top: auto; /* 清除桌面端的top值 */
     z-index: 1000; /* 确保按钮在最上层 */
     flex-direction: column; /* 垂直排列按钮 */
