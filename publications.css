@@ -24,18 +24,18 @@
   font-size: 1.2em;
 }
 
-.publication-list li {
+.publication-list .box {
   margin-bottom: 10px;
   padding: 12px;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  /* display: flex; */
+  display: flex;
   align-items: center;
 }
 
-.publication-list li:hover {
+.publication-list .box:hover {
   transform: translateX(5px);
   box-shadow: 0 2px 4px rgba(72, 61, 139, 0.2);
 }
@@ -68,13 +68,18 @@
   text-decoration: underline;
 }
 
+.publication-list .info {
+  margin-left: 0.5em;
+  line-height: 2em;
+}
+
 .authors {
   display: block;
-  margin-left: 2em;
+  margin-left: 0em;
 }
 .journal {
   display: block;
-  text-indent: 2em;
+  text-indent: 0em;
 }
 
 /* 导览栏 */

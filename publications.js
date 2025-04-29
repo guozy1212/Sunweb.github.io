@@ -10,7 +10,7 @@ const translations = {
       "News",
       "Contact",
     ],
-    navTitle: "Quick Navigation",
+    navTitle: "Quick Navigator",
     navLinks: ["Top", "Representative Publications", "Full List"],
     browseYear: "Browse by Year ▼",
     before2013: "Before 2013",
