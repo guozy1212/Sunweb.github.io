@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const codeId = button.getAttribute("data-code");
       const activeSection = document.getElementById(codeId);
       activeSection.classList.add("active");
-
+      fgs;
       // 强制重绘确保布局正确
       void activeSection.offsetHeight;
     });
