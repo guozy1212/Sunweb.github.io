@@ -32,7 +32,7 @@ const translations = {
         "The higher-order tensor message-passing interatomic potential function, HotPP, is an E(n)-equivariant message-passing neural network capable of extending Cartesian tensor embeddings and messages to arbitrary orders. It supports the calculation of potential energy surfaces, electric dipole moments, and polarizabilities. Additionally, it provides interfaces with commonly used software such as ASE and LAMMPS, making it applicable for computing phonon spectra, infrared spectra, and Raman spectra.",
         "For more details and access to the HotPP, visit the ",
 
-        "GPUMD (Graphics Processing Units Molecular Dynamics) is a high-performance molecular dynamics simulation software package initially developed and maintained by Professor Zheyong Fan and his team. Designed to leverage GPU acceleration, it enables efficient simulations of large-scale systems while maintaining high computational accuracy. A key feature is the integration of the Neuroevolution Potential (NEP), achieving exceptional speed and precision. The software supports diverse functionalities such as NVE, NVT, NPT ensembles, thermal transport, phonon dispersion, and elastic constant determination, requiring NVIDIA GPUs and CUDA environments.",
+        "GPUMD (Graphics Processing Units Molecular Dynamics) is a high-performance molecular dynamics simulation software package initially developed and maintained by Professor Zheyong Fan and his team. In recent years, members from Prof. Jian Sun's group, such as Shuning Pan, Yong Wang, Junjie Wang, Qiuhan Jia, Haoting Zhang, Jiuyang Shi, Zhixing Liang, et al.,  made a lot of efforts to contribute. Designed to leverage GPU acceleration, it enables efficient simulations of large-scale systems while maintaining high computational accuracy. A key feature is the integration of the Neuroevolution Potential (NEP), achieving exceptional speed and precision. The software supports diverse functionalities such as NVE, NVT, NPT ensembles, thermal transport, phonon dispersion, and elastic constant determination, requiring NVIDIA GPUs and CUDA environments.",
         "For more details and access to the GPUMD, visit the ",
       ],
     },
@@ -68,7 +68,7 @@ const translations = {
         "HotPP 是一种 E(n) 等变性的高阶张量消息传递神经网络，能够扩展笛卡尔张量嵌入和消息至任意阶数，支持计算势能面、电偶极矩与极化率。同时，它与 ASE、LAMMPS 软件兼容，可应用于声子谱、红外光谱和拉曼光谱的计算。",
         "了解更多详情及访问 HotPP，请查看",
 
-        "GPUMD（图形处理单元分子动力学）是由樊哲勇教授及其团队开发维护的高性能分子动力学模拟软件，设计目标是充分利用 GPU 加速，能高效地模拟大规模体系，保持高计算精度。其集成的 NEP 势场实现了超高的计算速度与准确性。GPUMD 支持多种功能如 NVE、NVT、NPT 系综、热传导、声子色散及弹性常数计算，需要 NVIDIA GPU 与 CUDA 环境。",
+        "GPUMD（图形处理单元分子动力学）是由樊哲勇教授及其团队开发维护的高性能分子动力学模拟软件，设计目标是充分利用 GPU 加速。近年来，孙建教授课题组成员潘书宁、王勇、王俊杰、贾秋涵、张皓庭、施九洋、梁智新等人作出了重要贡献。它能高效地模拟大规模体系，保持高计算精度。其集成的 NEP 势场实现了超高的计算速度与准确性。GPUMD 支持多种功能如 NVE、NVT、NPT 系综、热传导、声子色散及弹性常数计算，需要 NVIDIA GPU 与 CUDA 环境。",
         "了解更多详情及访问 GPUMD，请查看",
       ],
     },
