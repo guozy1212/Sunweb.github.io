@@ -46,11 +46,11 @@ h2 {
 }
 
 .professor img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 20%;
+  object-fit: contain;
+  object-position: 30%, 50%;
   border: 1px solid black;
 }
 
@@ -102,13 +102,13 @@ footer {
 .fellows-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 30px;
   justify-content: flex-start;
   margin-top: 20px;
 }
 
 /* 单个博士后条目 */
-/* .fellow {
+.fellow {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,26 +121,25 @@ footer {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
-} */
-/*
+}
+
 .fellow p {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1em;
   color: #2c3e50;
-  font-weight: bold;
-} 
-*/
+  /* font-weight: bold; */
+}
 
 /* 标题样式 */
-/* .fellows h3 {
+.fellows h3 {
   color: #2980b9;
   font-size: 1.8em;
   border-bottom: 2px solid #e6e6f0;
   padding-bottom: 10px;
   margin-bottom: 20px;
   margin-top: 0px;
-} */
+}
 
 a {
   color: #9522c2; /* 正文链接的默认颜色 */
@@ -153,79 +152,4 @@ a:hover {
 
 a:visited {
   color: #9522c2; /* 确保访问过的正文链接颜色不变 */
-}
-
-/* 学生容器样式 */
-.fellow {
-  display: flex;
-  width: calc(50% - 30px);
-  margin-bottom: 30px;
-  padding: 0px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.fellow-image {
-  flex: 0 0 120px;
-  margin-right: 20px;
-}
-
-.fellow-image img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.fellow-info {
-  flex: 1;
-}
-
-.fellow-info p {
-  margin: 5px 0;
-  color: #2c3e50;
-}
-
-.name {
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-/* .chinese-name {
-  font-size: 0.95em;
-  color: #666;
-} */
-
-.affiliation {
-  font-size: 0.9em;
-  margin-top: 8px !important;
-}
-
-.email {
-  font-size: 0.9em;
-}
-
-.email a {
-  color: #2980b9;
-  text-decoration: none;
-}
-
-.email a:hover {
-  text-decoration: underline;
-}
-
-/* 调整容器布局 */
-.fellows-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-  .student {
-    width: 100%;
-  }
 }

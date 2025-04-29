@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Codes - Jian Sun Research Group</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Lobster&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="code.css" />
+  </head>
+  <!-- <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="expandedImg" />
+  </div> -->
+  <body>
+    <header>
+      <h1>The Sun Group</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="code.html" class="active">Codes</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content-wrapper">
+        <h2>Research Codes</h2>
+        <div class="code-nav">
+          <button class="code-btn" data-code="magus">MAGUS</button>
+          <button class="code-btn" data-code="hotpp">HOTPP</button>
+          <button class="code-btn" data-code="gpumd">GPUMD</button>
+        </div>
+
+        <div id="magus" class="code-section">
+          <h3>
+            Machine learning and graph theory assisted crystal structure
+            prediction method
+          </h3>
+          <div class="images-magus">
+            <img src="images/code/Magus1.jpg" alt="MAGUS Image 1" />
+            <img src="images/code/Magus2.jpg" alt="MAGUS Image 2" />
+          </div>
+          <p>
+            <strong>Introduction</strong><br />
+            MAGUS is a machine learning and graph theory assisted crystal
+            structure prediction method developed by Prof. Jian Sun's group at
+            the School of Physics at Nanjing University. The programming
+            languages are mainly Python and C++ and it is built as a pip
+            installable package. Users can use just a few commands to install
+            the package. MAGUS has also the advantage of high modularity and
+            extensibility. All source codes are transparent to users after
+            installation, and users can modify particular parts according to
+            their needs.
+          </p>
+          <p>
+            MAGUS has been used to study many systems. Several designed new
+            materials have been synthesized experimentally, and a number of
+            high-profile academic papers have been published.
+          </p>
+          <p>
+            For more details and access to the Magus, visit the
+            <a href="https://gitlab.com/bigd4/magus" target="_blank"
+              >code repository</a
+            >.
+          </p>
+        </div>
+
+        <div id="hotpp" class="code-section">
+          <h3>High order tensor Passing Potential</h3>
+          <div class="images-hotpp">
+            <img src="images/code/HotPP1.png" alt="HotPP Image 1" />
+            <img src="images/code/HotPP2.png" alt="HotPP Image 2" />
+          </div>
+          <p>
+            <strong>Introduction</strong><br />
+            The higher-order tensor message-passing interatomic potential
+            function, HotPP, is an E(n)-equivariant message-passing neural
+            network capable of extending Cartesian tensor embeddings and
+            messages to arbitrary orders. It supports the calculation of
+            potential energy surfaces, electric dipole moments, and
+            polarizabilities. Additionally, it provides interfaces with commonly
+            used software such as ASE and LAMMPS, making it applicable for
+            computing phonon spectra, infrared spectra, and Raman spectra.
+          </p>
+          <p>
+            For more details and access to the HotPP, visit the
+            <a href="https://gitlab.com/bigd4/hotpp" target="_blank"
+              >code repository</a
+            >.
+          </p>
+        </div>
+
+        <div id="gpumd" class="code-section">
+          <h3>Graphics Processing Units Molecular Dynamics</h3>
+          <div class="images-gpumd">
+            <img src="images/code/gpumd.png" alt="gpumd Image 1" />
+            <img src="images/code/nep.png" alt="gpumd Image 2" />
+          </div>
+          <p>
+            <strong>Introduction</strong><br />
+            GPUMD (Graphics Processing Units Molecular Dynamics) is a
+            high-performance molecular dynamics simulation software package
+            developed and maintained by Professor Zheyong Fan and his team,
+            initially released in 2017. Designed to leverage GPU acceleration,
+            it enables efficient simulations of large-scale systems while
+            maintaining high computational accuracy. A key feature of GPUMD is
+            its integration of the Neuroevolution Potential (NEP), a
+            machine-learning interatomic potential trained via evolutionary
+            algorithms, which achieves exceptional computational speed (up to
+            10^7 atom-steps per second on consumer-grade GPUs) and precision
+            without relying on external ML frameworks like TensorFlow or
+            PyTorch. The software supports diverse functionalities including
+            NVE, NVT, and NPT ensembles, thermal transport analysis (via
+            Green-Kubo, NEMD, and HNEMD methods), structural optimization,
+            phonon dispersion calculations, and elastic constant determination.
+            Compatible with both Windows and Linux systems, GPUMD requires
+            NVIDIA GPUs (compute capability ≥3.5) and CUDA environments for
+            installation. Its ecosystem includes auxiliary tools like PyNEP,
+            GPYUMD, and CALORINE for preprocessing/postprocessing and
+            interoperability with platforms like ASE and LAMMPS. Widely applied
+            in heat transfer, mechanical properties, phase transitions,
+            irradiation damage, and catalysis, GPUMD has been utilized in over
+            130 high-impact publications and continues to evolve through active
+            community contributions.
+          </p>
+          <p>
+            For more details and access to the GPUMD, visit the
+            <a href="https://github.com/brucefan1983/GPUMD" target="_blank"
+              >code repository</a
+            >.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Jian Sun Research Group - Nanjing University</p>
+      <div class="contact-info">
+        <div>
+          <p>No.22 Hankou Road, Nanjing 210093, China.</p>
+          <p>Tel: +86-(0)25-83687822</p>
+        </div>
+        <div>
+          <p>Fax: +86-(0)25-83595535</p>
+          <p>Email: jiansun@nju.edu.cn</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="code.js"></script>
+  </body>
+</html>

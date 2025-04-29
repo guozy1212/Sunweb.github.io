@@ -257,3 +257,26 @@ nav a:visited {
     transform: scale(1);
   }
 } */
+
+.language-switch {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.lang-btn {
+  margin: 0 5px;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  color: #2f2a5e;
+  border: 1px solid #2f2a5e;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.lang-btn:hover {
+  background-color: #2f2a5e;
+  color: #ffffff;
+}
