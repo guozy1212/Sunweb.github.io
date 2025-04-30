@@ -16,8 +16,10 @@ const translations = {
     contact: {
       title: ["Contact Us", "Opening"],
       members: "Members: Prof. Jian Sun",
-      address:
-        "Address: National Laboratory of Solid State Microstructures and School of Physics, Nanjing University, Nanjing 210093, China.",
+      address: [
+        "Address: School of Physics, Nanjing University, ",
+        "No. 22 Hankou Road, Nanjing 210093, China.",
+      ],
       phone: "Phone: +86-(0)25-83687822",
       email: "Email: jiansun@nju.edu.cn",
       welcome:
@@ -42,8 +44,7 @@ const translations = {
     contact: {
       title: ["联系我们", "欢迎加入"],
       members: "成员：孙建教授",
-      address:
-        "地址：中国江苏省南京市南京大学固体微结构国家重点实验室与物理学院，邮编：210093",
+      address: ["地址：南京大学物理学院", "江苏省南京市汉口路22号"],
       phone: "电话：+86-(0)25-83687822",
       email: "邮箱：jiansun@nju.edu.cn",
       welcome:
@@ -83,9 +84,10 @@ function setLanguage(lang) {
     h2[0].textContent = data.contact.title[0];
     h2[1].textContent = data.contact.title[1];
     ps[0].textContent = data.contact.members;
-    ps[1].textContent = data.contact.address;
-    ps[2].textContent = data.contact.phone;
-    ps[3].innerHTML = data.contact.email;
-    ps[4].textContent = data.contact.welcome;
+    ps[1].textContent = data.contact.address[0];
+    ps[2].textContent = data.contact.address[1];
+    ps[3].textContent = data.contact.phone;
+    ps[4].innerHTML = data.contact.email;
+    ps[5].textContent = data.contact.welcome;
   }
 }
