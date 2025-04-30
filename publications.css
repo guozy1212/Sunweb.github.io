@@ -41,13 +41,12 @@
 }
 
 .publication-list li::before {
-  content: "\f15c";
-  font-weight: 900;
   color: #483d8b;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   counter-increment: publication-counter;
   content: "[" counter(publication-counter) "] ";
-  display: inline;
+  display: inline; /* 关键：改为块级才能独立控制垂直对齐 */
   font-weight: normal;
 }
 
@@ -55,6 +54,11 @@
   counter-reset: publication-counter;
   list-style: none;
   padding-left: 0;
+}
+
+.publication-list div {
+  align-self: flex-start;
+  line-height: 2em;
 }
 
 .publication-list a {

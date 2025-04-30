@@ -62,7 +62,8 @@ const translations = {
         "Proposing strategies for high-pressure synthesis of novel quantum materials",
       ],
       captions: [
-        "Visualization of our computational methods in action",
+        "The workflow of MAGUS",
+        "The network architecture of HotPP",
         "Simulation of phase transitions under extreme conditions",
         "Cover of National Science Review, Volume 7, Issue 10, October(2020)",
         "High-pressure material structure prediction",
@@ -114,7 +115,8 @@ const translations = {
         "提出了高压合成新型量子材料的策略",
       ],
       captions: [
-        "计算方法可视化演示",
+        "MAGUS工作流",
+        "HotPP网络结构",
         "极端条件下的相变模拟",
         "《国家科学评论》2020年第7卷第10期封面",
         "高压材料结构预测",

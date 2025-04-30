@@ -40,9 +40,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 15px;
-  width: 40%;
-  height: 100%;
 }
 
 .professor img {
@@ -54,18 +51,18 @@ h2 {
   border: 1px solid black;
 }
 
-.professor-info {
-  max-width: 600px;
+.professor-info-r {
+  max-width: 650px;
 }
 
-.professor-info h3 {
+.professor-info-r h3 {
   margin-top: 10px;
   margin-bottom: 0;
   font-size: 1.2em;
   color: #2c3e50;
 }
 
-.professor-info h4 {
+.professor-info-r h4 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.2em;
@@ -75,6 +72,17 @@ h2 {
 .professor-info ul {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+.professor-info-l {
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.proleft {
+  margin-right: 15px;
+  width: 40%;
+  height: 100%;
 }
 
 footer {

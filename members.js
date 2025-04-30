@@ -16,9 +16,7 @@ const translations = {
     members: {
       title: "Team Members",
       connection: "Connection",
-      professorTitle:
-        "University Professor, School of Physics, Nanjing University",
-      honorsTitle: "Honors/Awards:",
+      eeh: ["Education", "Employment", "Honors/Awards"],
       postdocTitle: "Postdoctoral Fellows",
       phdTitle: "Ph.D Candidates",
       undergradTitle: "Undergraduate Fellows",
@@ -89,8 +87,7 @@ const translations = {
     members: {
       title: "团队成员",
       connection: "联系方式",
-      professorTitle: "南京大学物理学院 教授",
-      honorsTitle: "荣誉奖项：",
+      eeh: ["教育经历", "学术经历", "荣誉奖项"],
       postdocTitle: "博士后成员",
       phdTitle: "博士研究生成员",
       undergradTitle: "本科生成员",
@@ -174,14 +171,12 @@ function setLanguage(lang) {
   if (title) title.textContent = data.members.title;
 
   // 教授信息
-  const conn = document.querySelector(".professor-info h3");
+  const conn = document.querySelector(".professor-info-l h3");
   if (conn) conn.textContent = data.members.connection;
-
-  const profTitle = document.querySelector(".professor-info p");
-  if (profTitle) profTitle.textContent = data.members.professorTitle;
-
-  const honorTitle = document.querySelector(".professor-info h4");
-  if (honorTitle) honorTitle.textContent = data.members.honorsTitle;
+  const eeh = document.querySelectorAll(".professor-info-r h3");
+  eeh.forEach((e, idx) => {
+    e.textContent = data.members.eeh[idx];
+  });
 
   // 各类成员小标题
   const headers = document.querySelectorAll(".fellows h3");
