@@ -14,10 +14,14 @@ const translations = {
     footerFax: "Fax: +86-(0)25-83595535",
     footerEmail: "Email: jiansun@nju.edu.cn",
     contact: {
-      title: "Contact Us",
-      address: "Address: No.22 Hankou Road, Nanjing 210093, China.",
+      title: ["Contact Us", "Opening"],
+      members: "Members: Prof. Jian Sun",
+      address:
+        "Address: National Laboratory of Solid State Microstructures and School of Physics, Nanjing University, Nanjing 210093, China.",
       phone: "Phone: +86-(0)25-83687822",
       email: "Email: jiansun@nju.edu.cn",
+      welcome:
+        "Our group have openings from time to time. We are looking for motivated students, postdocs and researchers to join us. Please feel free to contact us if you are interested.",
     },
   },
 
@@ -36,10 +40,14 @@ const translations = {
     footerFax: "传真：+86-(0)25-83595535",
     footerEmail: "邮箱：jiansun@nju.edu.cn",
     contact: {
-      title: "联系我们",
-      address: "地址：南京市汉口路22号，邮编：210093",
+      title: ["联系我们", "欢迎加入"],
+      members: "成员：孙建教授",
+      address:
+        "地址：中国江苏省南京市南京大学固体微结构国家重点实验室与物理学院，邮编：210093",
       phone: "电话：+86-(0)25-83687822",
       email: "邮箱：jiansun@nju.edu.cn",
+      welcome:
+        "本课题组长期招聘博士后、研究生及科研人员，诚邀有志之士加入。欢迎感兴趣者随时联系！",
     },
   },
 };
@@ -70,11 +78,14 @@ function setLanguage(lang) {
   // 页面主内容
   const contactSection = document.querySelector("#contact1111");
   if (contactSection) {
-    const h2 = contactSection.querySelector("h2");
+    const h2 = contactSection.querySelectorAll("h2");
     const ps = contactSection.querySelectorAll("p");
-    h2.textContent = data.contact.title;
-    ps[0].textContent = data.contact.address;
-    ps[1].textContent = data.contact.phone;
-    ps[2].innerHTML = data.contact.email;
+    h2[0].textContent = data.contact.title[0];
+    h2[1].textContent = data.contact.title[1];
+    ps[0].textContent = data.contact.members;
+    ps[1].textContent = data.contact.address;
+    ps[2].textContent = data.contact.phone;
+    ps[3].innerHTML = data.contact.email;
+    ps[4].textContent = data.contact.welcome;
   }
 }
