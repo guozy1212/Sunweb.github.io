@@ -15,7 +15,7 @@ const translations = {
     footerEmail: "Email: jiansun@nju.edu.cn",
     contact: {
       title: ["Contact Us", "Opening"],
-      members: "Members: Prof. Jian Sun",
+      members: "Name: Prof. Jian Sun",
       address: [
         "Address: School of Physics, Nanjing University, ",
         "No. 22 Hankou Road, Nanjing 210093, China.",
