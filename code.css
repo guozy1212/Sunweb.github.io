@@ -32,12 +32,12 @@
 
 .research-image {
   flex: 0 0 auto;
-  max-width: auto;
+  max-width: 80%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  height: 100%;
 }
 
 .research-image img {
