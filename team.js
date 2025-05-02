@@ -17,6 +17,29 @@ const translations = {
       title: "Team Members",
       connection: "Connection",
       eeh: ["Education", "Employment", "Honors/Awards"],
+      proup: [
+        "School of Physics, Nanjing University",
+        "Tel: +86-(0)25-83687822",
+        "Fax: +86-(0)25-83595535",
+        "Email: jiansun@nju.edu.cn",
+        "",
+        "1998-2002, Department of Physics, Nanjing University, B.S.",
+        "2002-2007, Department of Physics, Nanjing University, Ph.D",
+        "2007-2008, National Research Council Canada, Canada, NSERC fellow",
+        "2008-2012, Ruhr University Bochum, Germany, Humboldt Fellow/Research associate",
+        "2012-2013, Cavendish Laboratory, University of Cambridge, UK, Marie Curie Fellow",
+        "2013-present, School of Physics, Nanjing University, Professor",
+        "Distinguished Young Scholar of National Natural Science Foundation of China (2021)",
+        "Distinguished Young Scholar of Jiangsu Province (2015)",
+        "GRC Alvin van Valkenburg Award (2014)",
+        '"QR Program - Youth" (2013)',
+        "Marie Curie Fellowship, EU (2012)",
+        "The second prize of China National Natural Science Award (2011, the 5th contributor)",
+        "Humboldt Fellowship, Germany (2008)",
+        "NSERC Fellowship, Canada (2007)",
+      ],
+      prodownh: "Biography",
+      bio: "Jian Sun is a professor in the physics School and National Laboratory of Solid State Microstructures at Nanjing University. He got his B.S. and PhD from Nanjing University at 2002 and 2007, respectively. After that, he spent 6 years and worked as a research fellow in NRC (Canada), Ruhr University Bochum (Germany) and University of Cambridge (UK). At 2013, he was  recruited as a professor at Nanjing University. The main research interests of Professor Sun spreads in computational condensed matter physics, extreme condition physics, materials design and simulations, matters in the interior of planets. He developed several machine learning driven computational methods, including the machine learning and graph theory assisted universal structure searcher (MAGUS), the message passing machine learning atomic potential (HotPP), and co-developed the machine learning molecular dynamics engine (GPUMD); predicted many new materials and some of them have been verified by experiments; predicted the exotic states of matter at high pressure and high temperature, such as the superionic, plastic and collective diffusion states. He has published more than 130 peer-reviewed papers in prestigious scientific journals, including 26 papers in high profile journals (<i>Nature Phys., PRL/PRX, PNAS and JACS</i>). Professor Sun is a committee member of the high pressure physics branch of Chinese Physics Society, the computational materials science branch of Chinese Materials Research Society, and the high pressure chemistry branch of Chinese Chemistry Society, the deputy chief editor of Progress of Physics, and the editorial board member of Matter and Radation at Extremes, and The Journal of High Pressure Physics.",
       postdocTitle: "Postdoctoral Fellows",
       phdTitle: "Ph.D Candidates",
       undergradTitle: "Undergraduate Fellows",
@@ -80,6 +103,29 @@ const translations = {
       title: "团队成员",
       connection: "联系方式",
       eeh: ["教育经历", "学术经历", "荣誉奖项"],
+      proup: [
+        "南京大学物理学院",
+        "电话：+86-(0)25-83687822",
+        "传真：+86-(0)25-83595535",
+        "邮箱：jiansun@nju.edu.cn",
+        "",
+        "1998-2002，南京大学物理系，本科",
+        "2002-2007，南京大学物理系，博士",
+        "2007-2008，加拿大研究委员会，NSERC学者",
+        "2008-2012，德国波鸿鲁尔大学，洪堡学者/副研究员",
+        "2012-2013，英国剑桥大学卡文迪许实验室，玛丽居里学者",
+        "2013-现在，南京大学物理学院，教授",
+        "国家自然基金委杰出青年基金（2021）",
+        "江苏省杰青（2015）",
+        "GRC Alvin van Valkenburg奖 （2014）",
+        "海外高层次青年人才 （2013）",
+        "欧盟玛丽居里奖学金 （2012）",
+        "国家自然科学奖二等奖（第五完成人）（2011）",
+        "德国洪堡奖学金 （2008）",
+        "加拿大NSERC奖学金 （2007）",
+      ],
+      prodownh: "个人简历",
+      bio: "孙建，南京大学物理学院和固体微结构物理全国重点实验室教授，博士生导师，国家基金委杰出青年基金项目（2021）和重大项目（2024）获得者。研究方向为：计算凝聚态与高压物理、材料设计、行星深部物质等。发展了若干计算模拟新方法，包括晶体结构预测新方法（MAGUS）、机器学习力场（HotPP）和机器学习分子动力学软件（GPUMD）；预言了多个新材料，若干被实验证实；预言了若干系统在高温高压下的超离子态、塑晶态等新奇物态。已发表学术论文130余篇，以第一或通讯作者在重要期刊（<i>Nat. Phys./Nat. Comput. Sci./Nat. Commun. /PRL/PRX/PNAS/JACS</i>）发表论文20余篇。曾获2011年中国国家自然科学二等奖（第五完成人）、2013年“国家海外高层次青年人才”、2014年国际高压领域青年科学家奖（Valkenburg奖）等。担任高压物理、计算材料学、高压化学等专委会委员、《物理学进展》副主编、MRE和《高压物理学报》编委。",
       postdocTitle: "博士后成员",
       phdTitle: "博士研究生成员",
       undergradTitle: "本科生成员",
@@ -169,6 +215,19 @@ function setLanguage(lang) {
   eeh.forEach((e, idx) => {
     e.textContent = data.members.eeh[idx];
   });
+
+  const proup = document.querySelectorAll(".proup li");
+  proup.forEach((l, idx) => {
+    if (data.members.proup[idx] == "" && idx != proup.length - 1) {
+    } else {
+      l.textContent = data.members.proup[idx];
+    }
+  });
+
+  const prodownh = document.querySelector(".prodown h3");
+  prodownh.textContent = data.members.prodownh;
+  const bio = document.querySelector(".prodown p");
+  bio.innerHTML = data.members.bio;
 
   // 各类成员小标题
   const headers = document.querySelectorAll(".fellows h3");

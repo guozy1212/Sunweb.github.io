@@ -19,13 +19,16 @@ h2 {
 }
 
 .professor {
-  display: flex;
-  align-items: center;
   margin-bottom: 15px;
   padding: 15px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 4px 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.proup {
+  display: flex;
+  align-items: center;
 }
 
 .professor-image p {
@@ -85,7 +88,11 @@ h2 {
   height: 100%;
 }
 
-footer {
+.prodown {
+  margin: 0px 50px 15px 50px;
+}
+
+.pro footer {
   background-color: #2c3e50;
   color: #ecf0f1;
   padding: 15px 0;
