@@ -71,15 +71,15 @@
 }
 
 /* 正文链接样式 */
-a {
+main a {
   color: #9522c2; /* 正文链接的默认颜色 */
   text-decoration: none;
 }
 
-ol a:hover {
+main ol a:hover {
   text-decoration: underline;
 }
 
-a:visited {
+main a:visited {
   color: #9522c2; /* 确保访问过的正文链接颜色不变 */
 }

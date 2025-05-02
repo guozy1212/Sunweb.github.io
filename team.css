@@ -150,16 +150,16 @@ footer {
   margin-top: 0px;
 }
 
-a {
+main a {
   color: #9522c2; /* 正文链接的默认颜色 */
   text-decoration: none;
 }
 
-a:hover {
+main a:hover {
   text-decoration: underline;
 }
 
-a:visited {
+main a:visited {
   color: #9522c2; /* 确保访问过的正文链接颜色不变 */
 }
 

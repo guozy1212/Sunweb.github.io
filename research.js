@@ -7,7 +7,7 @@ const translations = {
       "Research",
       "Publications",
       "Codes",
-      "Members",
+      "Team",
       "News",
       "Contact",
     ],
@@ -74,15 +74,7 @@ const translations = {
   },
 
   zh: {
-    nav: [
-      "主页",
-      "研究方向",
-      "发表论文",
-      "开发代码",
-      "团队成员",
-      "新闻动态",
-      "联系我们",
-    ],
+    nav: ["主页", "研究", "论文", "代码", "团队", "新闻", "联系我们"],
     footerLocation: "中国江苏省南京市",
     footerTel: "电话：+86-(0)25-83687822",
     footerFax: "传真：+86-(0)25-83595535",
