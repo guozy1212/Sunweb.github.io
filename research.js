@@ -156,7 +156,6 @@ function setLanguage(lang) {
       const a = document.createElement("a");
       a.href = "code.html";
       a.textContent = lang === "zh" ? "代码仓库" : "Code Repository";
-      a.target = "_blank";
       a.style = "text-decoration: underline";
       h3.appendChild(a);
       h3.innerHTML += ")";
