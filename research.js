@@ -38,7 +38,7 @@ const translations = {
     research: {
       title: "Research Overview",
       directions: [
-        "Research Direction 1: Development of Computational Methods",
+        "Research Direction 1: Development of Computational Methods (",
         "Research Direction 2: Dynamical Simulations of Novel States of Matter and Phase Transitions",
         "Research Direction 3: Prediction and Design of High-Pressure Materials",
       ],
@@ -151,7 +151,18 @@ function setLanguage(lang) {
   document.querySelector("#research h2").textContent = data.research.title;
   document.querySelector("#research > p").textContent = data.research.overview;
   document.querySelectorAll(".research-direction h3").forEach((h3, idx) => {
-    h3.textContent = data.research.directions[idx];
+    if (idx == 0) {
+      h3.textContent = data.research.directions[idx];
+      const a = document.createElement("a");
+      a.href = "code.html";
+      a.textContent = lang === "zh" ? "代码仓库" : "Code Repository";
+      a.target = "_blank";
+      a.style = "text-decoration: underline";
+      h3.appendChild(a);
+      h3.innerHTML += ")";
+    } else {
+      h3.textContent = data.research.directions[idx];
+    }
   });
 
   const paragraphs = document.querySelectorAll(".research-direction > p");
