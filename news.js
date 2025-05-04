@@ -15,8 +15,11 @@ const translations = {
     footerEmail: "Email: jiansun@nju.edu.cn",
     news: {
       title: "Group News",
-      date: ["December 13, 2024", "September 30, 2024", "September 6, 2024"],
+      date: ["April 22, 2025","March 22, 2025","March 3, 2025","December 13, 2024", "September 30, 2024", "September 6, 2024" ],
       items: [
+        "【Xinhua News Agency Report】Chinese and international researchers have unveiled the laws governing the evolution of materials 'from two-dimensional to three-dimensional.'",
+        "The National Natural Science Foundation of China's Department of Interdisciplinary Sciences convened the kick-off meeting and implementation plan argumentation session for the major project 'Physical Mechanisms and Effects of the Interior Materials and Their State Evolution in Giant Planets.'",
+        "Professor Sun Jian's team released the crystal structure search software MAGUS 2.0.",
         "Professor Sun Jian's team predicts quasi-two-dimensional spin Pells phase transition in potassium ammonium compounds.",
         "Professor Sun Jian's team used MAGUS to predict novelty two-dimensional materials of M4XY2 family.",
         "Professor Sun Jian's team released high-precision message transmission machine learning force field HotPP.",
@@ -32,8 +35,11 @@ const translations = {
     footerEmail: "邮箱：jiansun@nju.edu.cn",
     news: {
       title: "课题组新闻",
-      date: ["2024.12.13", "2024.11.30", "2024.11.6"],
+      date: ["2025.04.22","2025.03.22","2025.03.03","2024.12.13", "2024.11.30", "2024.11.6"],
       items: [
+        "【新华社报道】中外科研人员揭示物质“从二维到三维”演变规律",
+        "国家自然科学基金委员会交叉科学部“巨行星内部物质及其物态演化的物理机制和效应”重大项目启动暨实施方案论证会召开",
+        "孙建教授课题组发布晶体结构搜索软件MAGUS2.0。",
         "孙建教授团队预言钾铵化合物中的准二维自旋佩尔斯相变。",
         "孙建教授团队用MAGUS预测具有新奇物性的M4XY2家族二维材料。",
         "孙建教授等人发布高精度消息传递机器学习力场HotPP。",
@@ -73,6 +79,26 @@ function setLanguage(lang) {
   date.forEach((t, idx) => {
     t.textContent = data.news.date[idx];
   });
+
+
+
+  // 给多个日期的新闻加上【HOT！！】的标签
+  const newsTimes = document.querySelectorAll(".news-item time");
+  const hotDates = ["2025-03-22", "2025-04-22" ]; // 需要加HOT的日期列表
+
+  newsTimes.forEach(time => {
+    const date = time.getAttribute("datetime");
+    if (hotDates.includes(date)) { // 检查当前日期是否在hotDates数组中
+      const hotLabel = document.createElement("span");
+      hotLabel.className = "hot-label";
+      hotLabel.textContent = lang === "en" ? "【HOT!!】" : "【热门!!】";
+      time.insertBefore(hotLabel, time.firstChild);
+    }
+  });
+
+
+
+
 
   // 新闻内容翻译（仅翻译文本，保留 link）
   const newsItems = document.querySelectorAll(".news-item p");
