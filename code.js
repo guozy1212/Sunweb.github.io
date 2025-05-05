@@ -38,7 +38,7 @@ const translations = {
       codelink: [
         'MAGUS Source Code: <a href="https://gitlab.com/bigd4/magus">https://gitlab.com/bigd4/magus</a>',
         'MAGUS Register: <a href="https://www.wjx.top/vm/m5eWS0X.aspx">https://www.wjx.top/vm/m5eWS0X.aspx</a>',
-        'The list of publications using MAGUS includes:<a href="https://gitlab.com/bigd4/magus/-/wikis/home/Publications">https://gitlab.com/bigd4/magus/-/wikis/home/Publications</a>',
+        'The list of publications using MAGUS: <a href="https://gitlab.com/bigd4/magus/-/wikis/home/Publications">https://gitlab.com/bigd4/magus/-/wikis/home/Publications</a>',
         'HotPP Web: <a href="https://gitlab.com/bigd4/hotpp">https://gitlab.com/bigd4/hotpp</a>',
         'GPUMD Web: <a href="https://gpumd.org/">https://gpumd.org/</a>',
         'GPUMD Source Code: <a href="https://github.com/brucefan1983/GPUMD">https://github.com/brucefan1983/GPUMD</a>',
