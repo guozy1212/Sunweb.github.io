@@ -41,6 +41,7 @@ const translations = {
       prodownh: "Biography",
       bio: "Jian Sun is a professor in the physics School and National Laboratory of Solid State Microstructures at Nanjing University. He got his B.S. and PhD from Nanjing University at 2002 and 2007, respectively. After that, he spent 6 years and worked as a research fellow in NRC (Canada), Ruhr University Bochum (Germany) and University of Cambridge (UK). At 2013, he was  recruited as a professor at Nanjing University. The main research interests of Professor Sun spreads in computational condensed matter physics, extreme condition physics, materials design and simulations, matters in the interior of planets. He developed several machine learning driven computational methods, including the machine learning and graph theory assisted universal structure searcher (MAGUS), the message passing machine learning atomic potential (HotPP), and co-developed the machine learning molecular dynamics engine (GPUMD); predicted many new materials and some of them have been verified by experiments; predicted the exotic states of matter at high pressure and high temperature, such as the superionic, plastic and collective diffusion states. He has published more than 130 peer-reviewed papers in prestigious scientific journals, including 26 papers in high profile journals (<i>Nature Phys., PRL/PRX, PNAS and JACS</i>). Professor Sun is a committee member of the high pressure physics branch of Chinese Physics Society, the computational materials science branch of Chinese Materials Research Society, and the high pressure chemistry branch of Chinese Chemistry Society, the deputy chief editor of Progress of Physics, and the editorial board member of Matter and Radation at Extremes, and The Journal of High Pressure Physics.",
       postdocTitle: "Postdoctoral Fellows",
+      ASTitle: "Adminitrative staff",
       phdTitle: "Ph.D Candidates",
       undergradTitle: "Undergraduate Fellows",
       alumniTitle: "Alumni",
@@ -156,6 +157,7 @@ const translations = {
       prodownh: "个人简历",
       bio: "孙建，南京大学物理学院和固体微结构物理全国重点实验室教授，博士生导师，国家基金委杰出青年基金项目（2021）和重大项目（2024）获得者。研究方向为：计算凝聚态与高压物理、材料设计、行星深部物质等。发展了若干计算模拟新方法，包括晶体结构预测新方法（MAGUS）、机器学习力场（HotPP）和机器学习分子动力学软件（GPUMD）；预言了多个新材料，若干被实验证实；预言了若干系统在高温高压下的超离子态、塑晶态等新奇物态。已发表学术论文130余篇，第一或通讯作者论文100余篇，包括在重要期刊（<i>Nat. Phys./Nat. Comput. Sci./Nat. Commun. /PRL/PRX /PNAS/JACS</i>）发表论文20余篇。曾获2011年中国国家自然科学二等奖（第五完成人）、2013年“国家海外高层次青年人才”、2014年国际高压领域青年科学家奖（Valkenburg奖）等。担任高压物理、计算材料学、高压化学等专委会委员、《物理学进展》副主编、MRE和《高压物理学报》编委。",
       postdocTitle: "博士后成员",
+      ASTitle: "财务秘书",
       phdTitle: "博士研究生成员",
       undergradTitle: "本科生成员",
       alumniTitle: "毕业生成员",
@@ -291,9 +293,10 @@ function setLanguage(lang) {
   const headers = document.querySelectorAll(".fellows h3");
   if (headers.length >= 4) {
     headers[0].textContent = data.members.postdocTitle;
-    headers[1].textContent = data.members.phdTitle;
-    headers[2].textContent = data.members.undergradTitle;
-    headers[3].textContent = data.members.alumniTitle;
+    headers[1].textContent = data.members.ASTitle;
+    headers[2].textContent = data.members.phdTitle;
+    headers[3].textContent = data.members.undergradTitle;
+    headers[4].textContent = data.members.alumniTitle;
   }
 
   // 姓名，所属单位
