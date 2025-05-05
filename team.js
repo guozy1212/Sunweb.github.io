@@ -12,7 +12,7 @@ const translations = {
     footerLocation: "Nanjing, Jiangsu Province, China",
     footerTel: "Tel: +86-(0)25-83687822",
     footerFax: "Fax: +86-(0)25-83595535",
-    footerEmail: "Email: jiansun(AT)nju.edu.cn (AT)=@",
+    footerEmail: "Email: magus (AT) nju.edu.cn (AT)=@",
     members: {
       title: "Team Members",
       connection: "Connection",
@@ -128,7 +128,7 @@ const translations = {
     footerLocation: "中国江苏省南京市",
     footerTel: "电话：+86-(0)25-83687822",
     footerFax: "传真：+86-(0)25-83595535",
-    footerEmail: "邮箱：jiansun(AT)nju.edu.cn (AT)=@",
+    footerEmail: "邮箱： magus (AT) nju.edu.cn (AT)=@",
     members: {
       title: "团队成员",
       connection: "联系方式",
