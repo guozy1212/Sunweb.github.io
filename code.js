@@ -26,7 +26,7 @@ const translations = {
       ],
       introTitles: ["Introduction", "Introduction", "Introduction"],
       paragraphs: [
-        "MAGUS is a machine learning and graph theory assisted crystal structure prediction method developed by Prof. Jian Sun's group at the School of Physics at Nanjing University. The programming languages are mainly Python and C++ and it is built as a pip installable package. Users can use just a few commands to install the package. MAGUS has also the advantage of high modularity and extensibility. All source codes are transparent to users after installation, and users can modify particular parts according to their needs. MAGUS has been used to study many systems. Several designed new materials have been synthesized experimentally, and a number of high-profile academic papers have been published.",
+        "MAGUS is a crystal structure prediction method developed independently by Professor Sun Jian's research group from the School of Physics at Nanjing University. It integrates machine learning and graph theory. Currently, it can perform fixed-composition and variable-composition searches in various systems, including three-dimensional crystals, two-dimensional crystals, molecular crystals, surfaces, clusters, and confined spaces. It supports interfaces with VASP, QE, CASTEP, ORCA, MTP, HotPP, NEP, DeepMD, gulp, lammps, XTB, and ASE, making it highly extensible. MAGUS is primarily written in Python and C++, packaged as a pip installation package, allowing users to install it easily. Its highly modular and extensible design means that all source code is open to users after installation, facilitating modifications as needed. MAGUS has been applied to the study of multiple systems, with some of the newly designed materials being experimentally synthesized. It has also led to the publication of several high-level papers.",
         "For more details and access to the MAGUS, visit the code repository.",
 
         "The higher-order tensor message-passing interatomic potential function, HotPP, is an E(n)-equivariant message-passing neural network capable of extending Cartesian tensor embeddings and messages to arbitrary orders. It supports the calculation of potential energy surfaces, electric dipole moments, and polarizabilities. Additionally, it provides interfaces with commonly used software such as ASE and LAMMPS, making it applicable for computing phonon spectra, infrared spectra, and Raman spectra.",
@@ -38,6 +38,7 @@ const translations = {
       codelink: [
         'MAGUS Source Code: <a href="https://gitlab.com/bigd4/magus">https://gitlab.com/bigd4/magus</a>',
         'MAGUS Register: <a href="https://www.wjx.top/vm/m5eWS0X.aspx">https://www.wjx.top/vm/m5eWS0X.aspx</a>',
+        'The list of publications using MAGUS includes:<a href="https://gitlab.com/bigd4/magus/-/wikis/home/Publications">https://gitlab.com/bigd4/magus/-/wikis/home/Publications</a>',
         'HotPP Web: <a href="https://gitlab.com/bigd4/hotpp">https://gitlab.com/bigd4/hotpp</a>',
         'GPUMD Web: <a href="https://gpumd.org/">https://gpumd.org/</a>',
         'GPUMD Source Code: <a href="https://github.com/brucefan1983/GPUMD">https://github.com/brucefan1983/GPUMD</a>',
@@ -61,7 +62,7 @@ const translations = {
       ],
       introTitles: ["简介", "简介", "简介"],
       paragraphs: [
-        "MAGUS 是南京大学物理学院孙健教授课题组开发的一种结合机器学习与图论的晶体结构预测方法。主要使用 Python 和 C++ 编写，打包为 pip 安装包，用户可以轻松安装。MAGUS 拥有高度模块化和可扩展性，安装后所有源代码对用户开放，便于根据需要修改。MAGUS 已应用于多种体系研究，设计的新材料部分已被实验合成，发表了多篇高水平论文。",
+        "MAGUS 是南京大学物理学院孙建教授课题组自主开发的一种结合机器学习与图论的晶体结构预测方法。目前可在三维晶体，二维晶体，分子晶体，表面，团簇，受限空间等体系中进行定组分和变组分搜索。支持VASP，QE，CASTEP，ORCA，MTP，HotPP，NEP，DeepMD，gulp，lammps，XTB，ASE等接口，便于扩展。MAGUS主要使用 Python 和 C++ 编写，打包为 pip 安装包，用户可以轻松安装。其拥有高度模块化和可扩展性，安装后所有源代码对用户开放，便于根据需要修改。MAGUS 已应用于多种体系研究，设计的新材料部分已被实验合成，发表了多篇高水平论文。",
         "了解更多详情及访问 MAGUS，请查看代码仓库。",
 
         "HotPP 是一种 E(n) 等变性的高阶张量消息传递神经网络，能够扩展笛卡尔张量嵌入和消息至任意阶数，支持计算势能面、电偶极矩与极化率。同时，它与 ASE、LAMMPS 软件兼容，可应用于声子谱、红外光谱和拉曼光谱的计算。",
@@ -73,6 +74,7 @@ const translations = {
       codelink: [
         'MAGUS源代码: <a href="https://gitlab.com/bigd4/magus">https://gitlab.com/bigd4/magus</a>',
         'MAGUS注册: <a href="https://www.wjx.top/vm/m5eWS0X.aspx">https://www.wjx.top/vm/m5eWS0X.aspx</a>',
+        '使用MAGUS发表的文章列表：<a href="https://gitlab.com/bigd4/magus/-/wikis/home/Publications">https://gitlab.com/bigd4/magus/-/wikis/home/Publications</a>',
         'HotPP网站: <a href="https://gitlab.com/bigd4/hotpp">https://gitlab.com/bigd4/hotpp</a>',
         'GPUMD网站: <a href="https://gpumd.org/">https://gpumd.org/</a>',
         'GPUMD源代码: <a href="https://github.com/brucefan1983/GPUMD">https://github.com/brucefan1983/GPUMD</a>',
@@ -112,49 +114,28 @@ function setLanguage(lang) {
     }
   });
 
-  // 修改 Introduction 小标题
-  //   document
-  //     .querySelectorAll(".research-direction strong")
-  //     .forEach((strong, idx) => {
-  //       if (data.code.introTitles[idx]) {
-  //         strong.textContent = data.code.introTitles[idx];
-  //       }
-  //     });
-
   // 修改各段文字
   const directions = document.querySelectorAll(".research-direction");
   const paragraphs = data.code.paragraphs;
   directions.forEach((direction, idx) => {
     const ps = direction.querySelectorAll("div > p");
-
-    // 第一段
-    ps[0].innerHTML =
-      `<strong>${data.code.introTitles[idx]}</strong><br/>` +
-      paragraphs[idx * 2];
-
-    // 第二段（带超链接）
-    const p2 = ps[1];
-    const a = p2.querySelector("a");
-    if (a) {
-      const href = a.getAttribute("href");
-      const target = a.getAttribute("target");
-      const translatedLinkText = lang === "zh" ? "代码仓库" : "code repository";
-
-      // 重新组装
-      p2.innerHTML = paragraphs[idx * 2 + 1];
-      const newA = document.createElement("a");
-      newA.href = href;
-      if (target) newA.target = target;
-      newA.textContent = translatedLinkText;
-      p2.appendChild(newA);
-
-      if (lang === "zh") p2.innerHTML += "。";
-      else p2.innerHTML += ".";
+    
+    // 第一段（简介）
+    if (ps[0]) {
+      ps[0].innerHTML = `<strong>${data.code.introTitles[idx]}</strong><br/>${paragraphs[idx * 2]}`;
+    }
+    
+    // 第二段（代码仓库链接）
+    if (ps[1]) {
+      ps[1].innerHTML = paragraphs[idx * 2 + 1];
     }
   });
 
+  // 代码链接
   const li = document.querySelectorAll(".codelink > li");
   li.forEach((l, idx) => {
-    l.innerHTML = data.code.codelink[idx];
+    if (data.code.codelink[idx]) {
+      l.innerHTML = data.code.codelink[idx];
+    }
   });
 }
