@@ -112,49 +112,28 @@ function setLanguage(lang) {
     }
   });
 
-  // 修改 Introduction 小标题
-  //   document
-  //     .querySelectorAll(".research-direction strong")
-  //     .forEach((strong, idx) => {
-  //       if (data.code.introTitles[idx]) {
-  //         strong.textContent = data.code.introTitles[idx];
-  //       }
-  //     });
-
   // 修改各段文字
   const directions = document.querySelectorAll(".research-direction");
   const paragraphs = data.code.paragraphs;
   directions.forEach((direction, idx) => {
     const ps = direction.querySelectorAll("div > p");
-
-    // 第一段
-    ps[0].innerHTML =
-      `<strong>${data.code.introTitles[idx]}</strong><br/>` +
-      paragraphs[idx * 2];
-
-    // 第二段（带超链接）
-    const p2 = ps[1];
-    const a = p2.querySelector("a");
-    if (a) {
-      const href = a.getAttribute("href");
-      const target = a.getAttribute("target");
-      const translatedLinkText = lang === "zh" ? "代码仓库" : "code repository";
-
-      // 重新组装
-      p2.innerHTML = paragraphs[idx * 2 + 1];
-      const newA = document.createElement("a");
-      newA.href = href;
-      if (target) newA.target = target;
-      newA.textContent = translatedLinkText;
-      p2.appendChild(newA);
-
-      if (lang === "zh") p2.innerHTML += "。";
-      else p2.innerHTML += ".";
+    
+    // 第一段（简介）
+    if (ps[0]) {
+      ps[0].innerHTML = `<strong>${data.code.introTitles[idx]}</strong><br/>${paragraphs[idx * 2]}`;
+    }
+    
+    // 第二段（代码仓库链接）
+    if (ps[1]) {
+      ps[1].innerHTML = paragraphs[idx * 2 + 1];
     }
   });
 
+  // 代码链接
   const li = document.querySelectorAll(".codelink > li");
   li.forEach((l, idx) => {
-    l.innerHTML = data.code.codelink[idx];
+    if (data.code.codelink[idx]) {
+      l.innerHTML = data.code.codelink[idx];
+    }
   });
 }
