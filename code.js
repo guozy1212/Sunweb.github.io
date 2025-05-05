@@ -14,7 +14,7 @@ const translations = {
     footerLocation: "Nanjing, Jiangsu Province, China",
     footerTel: "Tel: +86-(0)25-83687822",
     footerFax: "Fax: +86-(0)25-83595535",
-    footerEmail: "Email: jiansun@nju.edu.cn",
+    footerEmail: "Email: jiansun(AT)nju.edu.cn (AT)=@",
 
     code: {
       title:
@@ -51,7 +51,7 @@ const translations = {
     footerLocation: "中国江苏省南京市",
     footerTel: "电话：+86-(0)25-83687822",
     footerFax: "传真：+86-(0)25-83595535",
-    footerEmail: "邮箱：jiansun@nju.edu.cn",
+    footerEmail: "邮箱：jiansun(AT)nju.edu.cn (AT)=@",
 
     code: {
       title: "本课题组开发/协作开发的计算方法与软件",
@@ -119,12 +119,14 @@ function setLanguage(lang) {
   const paragraphs = data.code.paragraphs;
   directions.forEach((direction, idx) => {
     const ps = direction.querySelectorAll("div > p");
-    
+
     // 第一段（简介）
     if (ps[0]) {
-      ps[0].innerHTML = `<strong>${data.code.introTitles[idx]}</strong><br/>${paragraphs[idx * 2]}`;
+      ps[0].innerHTML = `<strong>${data.code.introTitles[idx]}</strong><br/>${
+        paragraphs[idx * 2]
+      }`;
     }
-    
+
     // 第二段（代码仓库链接）
     if (ps[1]) {
       ps[1].innerHTML = paragraphs[idx * 2 + 1];

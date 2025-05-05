@@ -12,7 +12,7 @@ const translations = {
     footerLocation: "Nanjing, Jiangsu Province, China",
     footerTel: "Tel: +86-(0)25-83687822",
     footerFax: "Fax: +86-(0)25-83595535",
-    footerEmail: "Email: jiansun@nju.edu.cn",
+    footerEmail: "Email: jiansun(AT)nju.edu.cn (AT)=@",
     contact: {
       title: ["Contact Us", "Opening"],
       members: "Name: Prof. Jian Sun",
@@ -21,7 +21,7 @@ const translations = {
         "No. 22 Hankou Road, Nanjing 210093, China.",
       ],
       phone: "Phone: +86-(0)25-83687822",
-      email: "Email: jiansun@nju.edu.cn",
+      email: "Email: jiansun(AT)nju.edu.cn (AT)=@",
       welcome:
         "Our group have openings from time to time. We are looking for motivated students, postdocs and researchers to join us. Please feel free to contact us if you are interested.",
     },
@@ -32,13 +32,13 @@ const translations = {
     footerLocation: "中国江苏省南京市",
     footerTel: "电话：+86-(0)25-83687822",
     footerFax: "传真：+86-(0)25-83595535",
-    footerEmail: "邮箱：jiansun@nju.edu.cn",
+    footerEmail: "邮箱：jiansun(AT)nju.edu.cn (AT)=@",
     contact: {
       title: ["联系我们", "欢迎加入"],
       members: "成员：孙建教授",
       address: ["地址：南京大学物理学院", "江苏省南京市汉口路22号"],
       phone: "电话：+86-(0)25-83687822",
-      email: "邮箱：jiansun@nju.edu.cn",
+      email: "邮箱：jiansun(AT)nju.edu.cn (AT)=@",
       welcome:
         "本课题组长期招聘博士后、研究生及科研人员，诚邀有志之士加入。欢迎感兴趣者随时联系！",
     },

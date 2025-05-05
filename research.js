@@ -14,7 +14,7 @@ const translations = {
     footerLocation: "Nanjing, Jiangsu Province, China",
     footerTel: "Tel: +86-(0)25-83687822",
     footerFax: "Fax: +86-(0)25-83595535",
-    footerEmail: "Email: jiansun@nju.edu.cn",
+    footerEmail: "Email: jiansun(AT)nju.edu.cn (AT)=@",
 
     home: {
       title: "Exploring Matter at Extremes, Decoding Tomorrow's Materials",
@@ -78,7 +78,7 @@ const translations = {
     footerLocation: "中国江苏省南京市",
     footerTel: "电话：+86-(0)25-83687822",
     footerFax: "传真：+86-(0)25-83595535",
-    footerEmail: "邮箱：jiansun@nju.edu.cn",
+    footerEmail: "邮箱：jiansun(AT)nju.edu.cn (AT)=@",
 
     research: {
       title: "研究概况",

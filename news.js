@@ -12,7 +12,7 @@ const translations = {
     footerLocation: "Nanjing, Jiangsu Province, China",
     footerTel: "Tel: +86-(0)25-83687822",
     footerFax: "Fax: +86-(0)25-83595535",
-    footerEmail: "Email: jiansun@nju.edu.cn",
+    footerEmail: "Email: jiansun(AT)nju.edu.cn (AT)=@",
     news: {
       title: "Group News",
       date: [
@@ -22,7 +22,7 @@ const translations = {
         "March 3, 2025",
         "December 13, 2024",
         "December 11, 2024",
-        "September 30, 2024", 
+        "September 30, 2024",
         "September 6, 2024",
         "October 11, 2023",
         "August 11, 2023",
@@ -65,7 +65,7 @@ const translations = {
     footerLocation: "中国江苏省南京市",
     footerTel: "电话：+86-(0)25-83687822",
     footerFax: "传真：+86-(0)25-83595535",
-    footerEmail: "邮箱：jiansun@nju.edu.cn",
+    footerEmail: "邮箱：jiansun(AT)nju.edu.cn (AT)=@",
     news: {
       title: "课题组新闻",
       date: [
@@ -146,25 +146,20 @@ function setLanguage(lang) {
     t.textContent = data.news.date[idx];
   });
 
-
-
   // 给多个日期的新闻加上【HOT！！】的标签
   const newsTimes = document.querySelectorAll(".news-item time");
-  const hotDates = ["2025-03-22", "2025-04-22","2025-04-21" ]; // 需要加HOT的日期列表
+  const hotDates = ["2025-03-22", "2025-04-22", "2025-04-21"]; // 需要加HOT的日期列表
 
-  newsTimes.forEach(time => {
+  newsTimes.forEach((time) => {
     const date = time.getAttribute("datetime");
-    if (hotDates.includes(date)) { // 检查当前日期是否在hotDates数组中
+    if (hotDates.includes(date)) {
+      // 检查当前日期是否在hotDates数组中
       const hotLabel = document.createElement("span");
       hotLabel.className = "hot-label";
       hotLabel.textContent = lang === "en" ? "【HOT!!】" : "【热门!!】";
       time.insertBefore(hotLabel, time.firstChild);
     }
   });
-
-
-
-
 
   // 新闻内容翻译（仅翻译文本，保留 link）
   const newsItems = document.querySelectorAll(".news-item p");
