@@ -191,19 +191,6 @@ footer p {
 }
 
 /* 按钮样式 */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #483d8b;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background-color: #2f2a5e;
-}
 
 /* 响应式设计 */
 @media (max-width: 768px) {
@@ -236,44 +223,3 @@ footer p {
     transform: scale(1);
   }
 } */
-
-.language-switch {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-}
-
-.lang-btn {
-  margin: 0 5px;
-  padding: 6px 12px;
-  background-color: #ffffff;
-  color: #2f2a5e;
-  border: 1px solid #2f2a5e;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  height: 35px;
-}
-
-.lang-btn:hover {
-  background-color: #2f2a5e;
-  color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .language-switch {
-    position: fixed; /* 改为fixed定位使其始终可见 */
-    bottom: 0px; /* 距离底部20px */
-    right: 0px; /* 距离右侧20px */
-    top: auto; /* 清除桌面端的top值 */
-    z-index: 1000; /* 确保按钮在最上层 */
-    flex-direction: column; /* 垂直排列按钮 */
-  }
-
-  .lang-btn {
-    padding: 8px 12px; /* 增大点击区域 */
-    border-radius: 20px; /* 圆形按钮 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影提升可见性 */
-  }
-}

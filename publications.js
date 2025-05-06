@@ -9,6 +9,7 @@ const translations = {
       "Team",
       "News",
       "Contact",
+      "中文",
     ],
     navTitle: "Quick Navigator",
     navLinks: ["Top", "Representative Publications", "Full List"],
@@ -23,7 +24,16 @@ const translations = {
     footerEmail: "Email: magus (AT) nju.edu.cn (AT)=@",
   },
   zh: {
-    nav: ["主页", "研究", "论文", "代码", "团队", "新闻", "联系我们"],
+    nav: [
+      "主页",
+      "研究",
+      "论文",
+      "代码",
+      "团队",
+      "新闻",
+      "联系我们",
+      "English",
+    ],
     navTitle: "快速导航",
     navLinks: ["顶部", "代表性论文", "完整列表"],
     browseYear: "按年份浏览 ▼",
@@ -39,8 +49,7 @@ const translations = {
 };
 
 // 语言切换功能
-const langEnBtn = document.getElementById("lang-en");
-const langZhBtn = document.getElementById("lang-zh");
+const langBtn = document.getElementById("language-switch");
 
 // 绑定切换事件
 

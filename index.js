@@ -18,8 +18,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 // 语言切换功能
-const langEnBtn = document.getElementById("lang-en");
-const langZhBtn = document.getElementById("lang-zh");
+const langBtn = document.getElementById("language-switch");
 
 // 定义英文和中文的内容
 const translations = {
@@ -32,6 +31,7 @@ const translations = {
       "Team",
       "News",
       "Contact",
+      "中文",
     ],
     swiperText: "Research Group Members",
     homeTitle: "Exploring Matter at Extremes, Decoding Tomorrow's Materials",
@@ -54,7 +54,16 @@ const translations = {
     footerEmail: "Email: magus (AT) nju.edu.cn (AT)=@",
   },
   zh: {
-    nav: ["主页", "研究", "论文", "代码", "团队", "新闻", "联系我们"],
+    nav: [
+      "主页",
+      "研究",
+      "论文",
+      "代码",
+      "团队",
+      "新闻",
+      "联系我们",
+      "English",
+    ],
     swiperText: "课题组成员",
     homeTitle: "探索极端环境下的物质，解码未来材料",
     welcome: "欢迎来到南京大学孙建教授计算材料科学课题组！",

@@ -8,6 +8,7 @@ const translations = {
       "Team",
       "News",
       "Contact",
+      "中文",
     ],
     footerLocation: "Nanjing, Jiangsu Province, China",
     footerTel: "Tel: +86-(0)25-83687822",
@@ -28,7 +29,16 @@ const translations = {
   },
 
   zh: {
-    nav: ["主页", "研究", "论文", "代码", "团队", "新闻", "联系我们"],
+    nav: [
+      "主页",
+      "研究",
+      "论文",
+      "代码",
+      "团队",
+      "新闻",
+      "联系我们",
+      "English",
+    ],
     footerLocation: "中国江苏省南京市",
     footerTel: "电话：+86-(0)25-83687822",
     footerFax: "传真：+86-(0)25-83595535",
@@ -46,8 +56,7 @@ const translations = {
 };
 
 // 语言切换按钮（可选）
-const langEnBtn = document.getElementById("lang-en");
-const langZhBtn = document.getElementById("lang-zh");
+const langBtn = document.getElementById("language-switch");
 
 // 切换语言函数
 function setLanguage(lang) {
@@ -78,6 +87,11 @@ function setLanguage(lang) {
     ps[0].textContent = data.contact.members;
     ps[1].textContent = data.contact.address[0];
     ps[2].textContent = data.contact.address[1];
+    if (lang === "en") {
+      ps[2].style = "margin-left: 4em;";
+    } else if (lang === "zh") {
+      ps[2].style = "margin-left: 3em;";
+    }
     ps[3].textContent = data.contact.phone;
     ps[4].innerHTML = data.contact.email;
     ps[5].textContent = data.contact.welcome;
