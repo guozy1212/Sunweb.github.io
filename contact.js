@@ -45,7 +45,7 @@ const translations = {
     footerEmail: "邮箱： magus (AT) nju.edu.cn (AT)=@",
     contact: {
       title: ["联系我们", "欢迎加入"],
-      members: "成员：孙建教授",
+      members: "姓名：孙建教授",
       address: ["地址：南京大学物理学院", "江苏省南京市汉口路22号"],
       phone: "电话：+86-(0)25-83687822",
       email: "邮箱：jiansun(AT)nju.edu.cn (AT)=@",
