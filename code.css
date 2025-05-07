@@ -83,3 +83,10 @@ main ol a:hover {
 main a:visited {
   color: #9522c2; /* 确保访问过的正文链接颜色不变 */
 }
+
+.codelink {
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
