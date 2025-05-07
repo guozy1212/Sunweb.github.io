@@ -42,12 +42,14 @@ h2 {
 .professor-image {
   display: flex;
   flex-direction: column;
+  margin-top: 10%;
   align-items: center;
 }
 
 .professor img {
   width: 200px;
   height: 200px;
+
   border-radius: 50%;
   object-fit: cover;
   object-position: 50% 20%;
@@ -56,6 +58,7 @@ h2 {
 
 .professor-info-r {
   max-width: 650px;
+  margin-top: 5%;
 }
 
 .professor-info-r h3 {
@@ -74,7 +77,6 @@ h2 {
 
 .professor-info-l {
   margin-left: 20%;
-  margin-top: 10%;
 }
 
 .proleft {
@@ -190,6 +192,9 @@ main a:visited {
 
 .fellow-info {
   flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .fellow-info p {
@@ -235,7 +240,34 @@ main a:visited {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-  .student {
+  .proup {
+    flex-direction: column;
+  }
+
+  .proleft,
+  .proright {
     width: 100%;
+    margin: 0;
+  }
+
+  .professor img {
+    width: 50%;
+    height: 10%；;
+  }
+
+  .fellow {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .fellow-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .fellows-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
