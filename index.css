@@ -42,10 +42,16 @@
 .highlight-item {
   background-color: #ffffff;
   padding: 20px;
+  margin: 0px 5px 0px 5px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 30%;
   text-align: center;
+  text-decoration: none;
+}
+
+.highlight-item a {
+  text-decoration: none;
 }
 
 .highlight-item:hover {
@@ -86,4 +92,16 @@ footer {
 
 .contact-info p {
   margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .highlight-item {
+    width: 100%;
+    margin: 5px 0 5px 0;
+  }
 }
